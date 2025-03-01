@@ -1,0 +1,62 @@
+---
+const services = [
+  {
+    title: "Desarrollo Web Full Stack",
+    description: "Creación de aplicaciones web completas con las últimas tecnologías",
+    icon: "💻",
+    features: ["React/Next.js", "Node.js/Express", "MongoDB/PostgreSQL", "APIs RESTful"],
+    highlight: "Optimizado para SEO y rendimiento"
+  },
+  {
+    title: "Consultoría Empresarial",
+    description: "Asesoramiento estratégico en transformación digital",
+    icon: "📊",
+    features: ["Análisis de procesos", "Estrategia digital", "Optimización de costos", "Implementación ágil"],
+    highlight: "ROI mensurable"
+  },
+  {
+    title: "Optimización de Sistemas",
+    description: "Mejora del rendimiento y escalabilidad de aplicaciones",
+    icon: "⚡",
+    features: ["Monitoreo continuo", "Ajuste de rendimiento", "Escalabilidad horizontal", "Reducción de latencia"],
+    highlight: "Rendimiento mejorado"
+  },
+  {
+    title: "Desarrollo a Medida",
+    description: "Soluciones personalizadas para necesidades específicas",
+    icon: "🎯",
+    features: ["Análisis de requerimientos", "Desarrollo ágil", "Pruebas personalizadas", "Soporte continuo"],
+    highlight: "Soluciones únicas"
+  }
+];
+---
+<section id="services" class="py-20 bg-slate-900">
+  <div class="container mx-auto px-6">
+    <h2 class="text-4xl font-bold text-center mb-4 text-white">Nuestros Servicios</h2>
+    <p class="text-gray-400 text-center max-w-2xl mx-auto mb-12">
+      Soluciones tecnológicas integrales para impulsar tu negocio al siguiente nivel
+    </p>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {services.map(service => (
+        <div class="p-6 rounded-xl bg-white/5 backdrop-blur-sm border border-white/10 hover:bg-white/10 transition-all group">
+          <div class="text-4xl mb-4 group-hover:scale-110 transition-transform">{service.icon}</div>
+          <h3 class="text-xl font-semibold mb-3 text-white">{service.title}</h3>
+          <p class="text-gray-400 mb-4">{service.description}</p>
+          <div class="space-y-2">
+            {service.features.map(feature => (
+              <div class="flex items-center text-sm text-gray-300">
+                <svg class="w-4 h-4 mr-2 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                {feature}
+              </div>
+            ))}
+          </div>
+          <div class="mt-4 pt-4 border-t border-white/10">
+            <span class="text-sm text-indigo-400 font-medium">{service.highlight}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
